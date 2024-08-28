@@ -1,6 +1,6 @@
 import re
 def convert_phone_number(phone):
-  result = re.sub(r"([0-9]{3})-([0-9]{3}-[0-9]{4})", r"(\1) \2", phone)
+  result = re.sub(r"\b([0-9]{3})-([0-9]{3}-[0-9]{4})\b", r"(\1) \2", phone)
   return result
 
 print(convert_phone_number("My number is 212-345-9999.")) # My number is (212) 345-9999.
